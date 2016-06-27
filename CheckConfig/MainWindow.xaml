@@ -1,0 +1,57 @@
+﻿<Window x:Class="CheckConfig.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CheckConfig"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800.981" Width="649.215">
+    <Grid>
+        <Button x:Name="CompareButton" Content="Compare" HorizontalAlignment="Left" Margin="418,218,0,0" VerticalAlignment="Top" Width="201" Click="CompareButton_Click" Height="53"/>
+        <TextBox x:Name="ExcelFileTextBox" HorizontalAlignment="Left" Height="23" Margin="25,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Text="C:\Users\ekb\Downloads\Config_Enable-Disable_Sitecore_8.1_upd3.xlsx"/>
+        <Label x:Name="label" Content="Path to configuration excel file:" HorizontalAlignment="Left" Margin="25,14,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="..." HorizontalAlignment="Left" Margin="590,41,0,0" VerticalAlignment="Top" Width="27" Height="23" Click="button_Click"/>
+        <TextBox x:Name="AppConfigTextBox" HorizontalAlignment="Left" Height="23" Margin="25,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="560" Text="C:\Users\ekb\Desktop\Unibail\App_Config"/>
+        <Button x:Name="button_Copy" Content="..." HorizontalAlignment="Left" Margin="590,100,0,0" VerticalAlignment="Top" Width="27" Height="23" Click="Button_Click_1"/>
+        <Label x:Name="label1" Content="Path to App_Config folder you want to check:" HorizontalAlignment="Left" Margin="25,74,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="CMCheckBox" Content="CM" HorizontalAlignment="Left" Margin="28,172,0,0" VerticalAlignment="Top" Width="52" IsChecked="True"/>
+        <Label x:Name="label2" Content="Roles:" HorizontalAlignment="Left" Margin="25,138,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <CheckBox x:Name="ProcessingCheckBox" Content="Processing" HorizontalAlignment="Left" Margin="28,189,0,0" VerticalAlignment="Top" Width="93"/>
+        <CheckBox x:Name="ReportingCheckBox" Content="Reporting" HorizontalAlignment="Left" Margin="28,206,0,0" VerticalAlignment="Top" Width="93"/>
+        <CheckBox x:Name="CDCheckBox" Content="CD" HorizontalAlignment="Left" Margin="28,223,0,0" VerticalAlignment="Top" Width="52"/>
+        <Label x:Name="SearchEngineCheckBox" Content="Search engine:" HorizontalAlignment="Left" Margin="178,138,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <RadioButton x:Name="SolrRadioButton" Content="SOLR" HorizontalAlignment="Left" Margin="183,171,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <RadioButton x:Name="LuceneRadioButton" Content="Lucene" HorizontalAlignment="Left" Margin="183,189,0,0" VerticalAlignment="Top"/>
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="420" Margin="25,312,0,0" VerticalAlignment="Top" Width="594" >
+            <TabItem Header="Should be enabled" Margin="-2,-2,-20,0">
+                <Grid Background="#FFE5E5E5">
+                    <ListBox x:Name="shouldBeEnabledListBox" HorizontalAlignment="Left" Height="372" Margin="10,10,0,0" VerticalAlignment="Top" Width="568" SelectionMode="Multiple"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Should be enabled but don't exist" Margin="21,-2,-61,0">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="259*"/>
+                        <ColumnDefinition Width="152*"/>
+                        <ColumnDefinition Width="53*"/>
+                        <ColumnDefinition Width="124*"/>
+                    </Grid.ColumnDefinitions>
+                    <ListBox x:Name="dontExistListBox" HorizontalAlignment="Left" Height="372" Margin="10,10,0,0" VerticalAlignment="Top" Width="568" Grid.ColumnSpan="4" SelectionMode="Multiple"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Should be disabled" Margin="62,-2,-62,0">
+                <Grid Background="#FFE5E5E5">
+                    <ListBox x:Name="shouldBeDisabledListBox" HorizontalAlignment="Left" Height="372" Margin="10,10,0,0" VerticalAlignment="Top" Width="568" SelectionMode="Multiple"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Custom config files" Margin="64,-2
+                     ,-64,0">
+                <Grid Background="#FFE5E5E5" Margin="0,1,0,-1">
+                    <ListBox x:Name="customFiles" HorizontalAlignment="Left" Height="371" Margin="10,10,0,0" VerticalAlignment="Top" Width="568" SelectionMode="Multiple"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+
+    </Grid>
+</Window>

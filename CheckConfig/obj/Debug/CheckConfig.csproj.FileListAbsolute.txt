@@ -1,0 +1,16 @@
+C:\Projects\CheckConfig\CheckConfig\bin\Debug\CheckConfig.exe.config
+C:\Projects\CheckConfig\CheckConfig\bin\Debug\CheckConfig.exe
+C:\Projects\CheckConfig\CheckConfig\bin\Debug\CheckConfig.pdb
+C:\Projects\CheckConfig\CheckConfig\obj\Debug\CheckConfig.csprojResolveAssemblyReference.cache
+C:\Projects\CheckConfig\CheckConfig\obj\Debug\MainWindow.g.cs
+C:\Projects\CheckConfig\CheckConfig\obj\Debug\App.g.cs
+C:\Projects\CheckConfig\CheckConfig\obj\Debug\CheckConfig_MarkupCompile.cache
+C:\Projects\CheckConfig\CheckConfig\obj\Debug\CheckConfig_MarkupCompile.lref
+C:\Projects\CheckConfig\CheckConfig\obj\Debug\MainWindow.baml
+C:\Projects\CheckConfig\CheckConfig\obj\Debug\CheckConfig.g.resources
+C:\Projects\CheckConfig\CheckConfig\obj\Debug\CheckConfig.Properties.Resources.resources
+C:\Projects\CheckConfig\CheckConfig\obj\Debug\CheckConfig.csproj.GenerateResource.Cache
+C:\Projects\CheckConfig\CheckConfig\obj\Debug\CheckConfig.exe
+C:\Projects\CheckConfig\CheckConfig\obj\Debug\CheckConfig.pdb
+C:\Projects\CheckConfig\CheckConfig\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Projects\CheckConfig\CheckConfig\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
