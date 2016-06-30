@@ -130,16 +130,36 @@ namespace CheckConfig
                         }
                     }
                 }
-                               
-                //fill listboxes with the results
-                shouldBeEnabledListBox.ItemsSource = resultsList.Keys.Where(x => resultsList[x] == true).ToList();
-                dontExistListBox.ItemsSource = resultsList.Keys.Where(x => resultsList[x] == null).ToList();
-                shouldBeDisabledListBox.ItemsSource = resultsList.Keys.Where(x => resultsList[x] == false).ToList();
-                customFiles.ItemsSource = actualConfigDict.Keys.Where(x => actualConfigDict[x] == true).ToList();
+
+                //fill textboxes with the results
+                
+                var list = resultsList.Keys.Where(x => resultsList[x] == true).ToList();
+
+                PutListToTextBox(list, shouldBeEnabledTextBox);
+
+                list = resultsList.Keys.Where(x => resultsList[x] == null).ToList();
+                PutListToTextBox(list, dontExistTextBox);
+
+
+                list = resultsList.Keys.Where(x => resultsList[x] == false).ToList();
+                PutListToTextBox(list, shouldBeDisabledTextBox);
+
+                list = actualConfigDict.Keys.Where(x => actualConfigDict[x] == true).ToList();
+                PutListToTextBox(list, customFilesTextBox);
                 
             }
 
 
+        }
+
+        private void PutListToTextBox(List<string> list, TextBox textBox)
+        {
+            var text = "";
+            foreach (var item in list)
+            {
+                text += item.ToString() + "\r\n";
+            }
+            textBox.Text = text;
         }
 
         private void GetTheFiles(ref List<string> filesList, string sDir)

@@ -25,29 +25,34 @@
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="420" Margin="25,312,0,0" VerticalAlignment="Top" Width="594" >
             <TabItem Header="Should be enabled" Margin="-2,-2,-20,0">
                 <Grid Background="#FFE5E5E5">
-                    <ListBox x:Name="shouldBeEnabledListBox" HorizontalAlignment="Left" Height="372" Margin="10,10,0,0" VerticalAlignment="Top" Width="568" SelectionMode="Multiple"/>
+                    <TextBox x:Name="shouldBeEnabledTextBox" HorizontalAlignment="Left" Height="372" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="568"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Should be enabled but don't exist" Margin="21,-2,-61,0">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="259*"/>
-                        <ColumnDefinition Width="152*"/>
+                        <ColumnDefinition Width="116*"/>
+                        <ColumnDefinition Width="36*"/>
                         <ColumnDefinition Width="53*"/>
                         <ColumnDefinition Width="124*"/>
                     </Grid.ColumnDefinitions>
-                    <ListBox x:Name="dontExistListBox" HorizontalAlignment="Left" Height="372" Margin="10,10,0,0" VerticalAlignment="Top" Width="568" Grid.ColumnSpan="4" SelectionMode="Multiple"/>
+                    <TextBox x:Name="dontExistTextBox" HorizontalAlignment="Left" Height="372" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="568" Grid.ColumnSpan="5"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Should be disabled" Margin="62,-2,-62,0">
                 <Grid Background="#FFE5E5E5">
-                    <ListBox x:Name="shouldBeDisabledListBox" HorizontalAlignment="Left" Height="372" Margin="10,10,0,0" VerticalAlignment="Top" Width="568" SelectionMode="Multiple"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130*"/>
+                        <ColumnDefinition Width="17*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="shouldBeDisabledTextBox" HorizontalAlignment="Left" Height="372" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="568" Grid.ColumnSpan="2"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Custom config files" Margin="64,-2
                      ,-64,0">
                 <Grid Background="#FFE5E5E5" Margin="0,1,0,-1">
-                    <ListBox x:Name="customFiles" HorizontalAlignment="Left" Height="371" Margin="10,10,0,0" VerticalAlignment="Top" Width="568" SelectionMode="Multiple"/>
+                    <TextBox x:Name="customFilesTextBox" HorizontalAlignment="Left" Height="372" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="568"/>
                 </Grid>
             </TabItem>
         </TabControl>
